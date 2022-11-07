@@ -1,9 +1,12 @@
-/* ::-webkit-scrollbar */
+.lyricsSub::-webkit-scrollbar,
+.queueSongs::-webkit-scrollbar {
+  display: none;
+}
 
 * {
   margin: 0;
   padding: 0;
-  font-family: Elegant;
+  font-family: Poppins;
 }
 
 .backImgFix img {
@@ -163,18 +166,6 @@
   margin: 10px;
 }
 
-/*.lyricsMain {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 60%;
-  z-index: 50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  background: #000;
-}*/
 .lyricsSub {
   position: absolute;
   width: 76%;
@@ -199,10 +190,6 @@
   height: 40%;
 }
 
-.x-icon {
-  opacity: 0;
-}
-
 .x-icon,
 .lycIcon {
   position: fixed;
@@ -218,6 +205,11 @@
   z-index: 50000;
   margin: auto;
   transition: 0.8s;
+}
+
+.x-icon {
+  opacity: 0;
+  right: 40px;
 }
 
 .lycIcon {
@@ -479,8 +471,8 @@
 
   .artist,
   .songInfo {
-    top: 65%;
-    font-size: 2rem;
+    top: 60%;
+    font-size: 1.8rem;
   }
 
   .artist {
@@ -494,13 +486,13 @@
 
   .progBarMain {
     height: 10px;
-    margin: 30px 0 15px 35px;
+    margin: 15px 0 15px 35px;
     border-radius: 30px;
     cursor: pointer;
   }
-  .progBarMain:hover .progBarSub {
+  /* .progBarMain:hover .progBarSub {
     height: 12px;
-  }
+  } */
   .controlsMain div {
     width: 65px;
     height: 65px;
@@ -526,26 +518,27 @@
   }
 
   .lycIcon img {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
   }
 
   .x-icon {
-    width: 80px;
-    height: 80px;
-    right: 40px;
+    width: 40px;
+    height: 40px;
+    right: 60px;
+    top: 10px;
   }
 
   .x-icon img {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
   }
 
   .lyricsSub {
     left: 75px;
-    top: 85px;
-    font-size: 4rem;
-    line-height: 120px;
+    top: 5px;
+    font-size: 1.5rem;
+    line-height: 60px;
   }
 
   .xIcon {
@@ -589,7 +582,7 @@
   }
 
   .songInfoCard {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .isPlaying {

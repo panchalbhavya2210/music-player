@@ -1,297 +1,293 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Music Player</title>
-  <link href="style.css" rel="stylesheet">
-
-<body>
-  <div class="backImgFix">
-    <img src="" id="songImgBack">
-    <div class="backImgMain">
-    </div>
-  </div>
-
-  <div class="musicPlayerMain">
-
-    <div class="musicPlayerSub">
-      <div class="lycIcon queryBtn" onclick="showLyric()">
-
-        <img src="/icons/notes.svg">
-
-      </div>
-      <div class="albumImgMusic">
-        <img src="" id="songImgCard">
-      </div>
-      <div class="songInfo">
-        <p id="title">Headlights</p>
-        <p class="artist" id="artistMain">Alan Walker</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="lineMain">
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-
-  <div class="musicControlMain">
-    <div class="timeOne">
-      <text id="dynamicChangeTime">00:00</text>
-      <text id="durationNotDynamic">00:00</text>
-    </div>
-    <div class="progBarMain" id="timeControl">
-      <div class="progBarSub queryBtn" id="progBarSub">
-
-      </div>
-    </div>
-    <div class="controlsMain">
-      <div id="backward" class="queryBtn">
-        <img src="/icons/player-skip-back.svg">
-      </div>
-      <div id="playPause" class="queryBtn">
-        <img src="/icons/player-play.svg" id="playPauseIcon">
-      </div>
-      <div id="forward" class="queryBtn">
-        <img src="/icons/player-skip-forward.svg">
-      </div>
-    </div>
-  </div>
-
-  <div class="lyricsSub queryBtn" id="showLyr">
-    <div class="x-icon queryBtn" id="x_icon" onclick="disableLyric()">
-      <img src="/icons/circle-x.svg">
-    </div>
-    <text id="lyrics"></text>
-  </div>
-
-  <div class="queueSongs" id="queSong">
-    <div class="xIcon" onclick=disableCard()>
-      <img src="/icons/circle-x.svg" class="imgX queryBtn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Music Player</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="backImgFix">
+      <img src="" id="songImgBack" />
+      <div class="backImgMain"></div>
     </div>
 
-    <div class="line"></div>
-    <div class="marginArt">
-      <div class="firstSong" onclick="zeroSong()">
-        <div class="imgDiv">
-          <img src="/img/headlight.jpeg">
-          <div class="songInfoCard">
-            <p>Headlights</p>
-            <p>Alan Walker</p>
+    <div class="musicPlayerMain">
+      <div class="musicPlayerSub">
+        <div class="lycIcon queryBtn" onclick="showLyric()">
+          <img src="/icons/notes.svg" />
+        </div>
+        <div class="albumImgMusic">
+          <img src="" id="songImgCard" />
+        </div>
+        <div class="songInfo">
+          <p id="title">Headlights</p>
+          <p class="artist" id="artistMain">Alan Walker</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lineMain">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <div class="musicControlMain">
+      <div class="timeOne">
+        <text id="dynamicChangeTime">00:00</text>
+        <text id="durationNotDynamic">00:00</text>
+      </div>
+      <div class="progBarMain" id="timeControl">
+        <div class="progBarSub queryBtn" id="progBarSub"></div>
+      </div>
+      <div class="controlsMain">
+        <div id="backward" class="queryBtn">
+          <img src="/icons/player-skip-back.svg" />
+        </div>
+        <div id="playPause" class="queryBtn">
+          <img src="/icons/player-play.svg" id="playPauseIcon" />
+        </div>
+        <div id="forward" class="queryBtn">
+          <img src="/icons/player-skip-forward.svg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="lyricsSub queryBtn" id="showLyr">
+      <div class="x-icon queryBtn" id="x_icon" onclick="disableLyric()">
+        <img src="/icons/circle-x.svg" />
+      </div>
+      <text id="lyrics"></text>
+    </div>
+
+    <div class="queueSongs" id="queSong">
+      <div class="xIcon" onclick="disableCard()">
+        <img src="/icons/circle-x.svg" class="imgX queryBtn" />
+      </div>
+
+      <div class="line"></div>
+      <div class="marginArt">
+        <div class="firstSong" onclick="zeroSong()">
+          <div class="imgDiv">
+            <img src="/img/headlight.jpeg" />
+            <div class="songInfoCard">
+              <p>Headlights</p>
+              <p>Alan Walker</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
           </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
+        </div>
+
+        <div class="lineCard"></div>
+
+        <div class="firstSong" onclick="firstSong()">
+          <div class="imgDiv">
+            <img src="/img/starboy.jpeg" />
+            <div class="songInfoCard">
+              <p>Starboy</p>
+              <p>The weekend & Daft punk</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lineCard"></div>
+
+        <div class="firstSong" onclick="secondSong()">
+          <div class="imgDiv">
+            <img src="/img/redemption.jpeg" />
+            <div class="songInfoCard">
+              <p>Redemption</p>
+              <p>Besomorph & Riell</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lineCard"></div>
+
+        <div class="firstSong" onclick="thirdSong()">
+          <div class="imgDiv">
+            <img src="/img/lastonestanding.jpeg" />
+            <div class="songInfoCard">
+              <p>Last one standing</p>
+              <p>Skyler grey & Eminem</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lineCard"></div>
+
+        <div class="firstSong" onclick="fourSong()">
+          <div class="imgDiv">
+            <img src="/img/aurora.jpeg" />
+            <div class="songInfoCard">
+              <p>Aurora</p>
+              <p>K-391 & RORY</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lineCard"></div>
+        <div class="firstSong" onclick="fiveSong()">
+          <div class="imgDiv">
+            <img src="/img/fakeasmile.jpeg" />
+            <div class="songInfoCard">
+              <p>Fake a smile</p>
+              <p>Alan Walker & salem ilese</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lineCard"></div>
+        <div class="firstSong" onclick="sixSong()">
+          <div class="imgDiv">
+            <img src="/img/glow.jpeg" />
+            <div class="songInfoCard">
+              <p>Glow</p>
+              <p>Corsak & Robinson</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lineCard"></div>
+
+        <div class="firstSong" onclick="sevenSong()">
+          <div class="imgDiv">
+            <img src="/img/helloworld.jpeg" />
+            <div class="songInfoCard">
+              <p>Hello World</p>
+              <p>Alan Walker & Torine</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lineCard"></div>
+
+        <div class="firstSong" onclick="eightSong()">
+          <div class="imgDiv">
+            <img src="/img/army.jpeg" />
+            <div class="songInfoCard">
+              <p>Army</p>
+              <p>Besomorph & Neoni</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lineCard"></div>
+
+        <div class="firstSong" onclick="nineSong()">
+          <div class="imgDiv">
+            <img src="/img/headinghome.jpeg" />
+            <div class="songInfoCard">
+              <p>Heading home</p>
+              <p>Alan Walker & Ruben</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lineCard"></div>
+
+        <div class="firstSong" onclick="tenSong()">
+          <div class="imgDiv">
+            <img src="/img/pride.jpeg" />
+            <div class="songInfoCard">
+              <p>Pride & Fear</p>
+              <p>Thefatrat & Riell</p>
+            </div>
+            <div class="isPlaying">
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+              <div class="a queryBtn"></div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="lineCard"></div>
-
-      <div class="firstSong" onclick="firstSong()">
-        <div class="imgDiv">
-          <img src="/img/starboy.jpeg">
-          <div class="songInfoCard">
-            <p>Starboy</p>
-            <p>The weekend & Daft punk</p>
-          </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lineCard"></div>
-
-      <div class="firstSong" onclick="secondSong()">
-        <div class="imgDiv">
-          <img src="/img/redemption.jpeg">
-          <div class="songInfoCard">
-            <p>Redemption</p>
-            <p>Besomorph & Riell</p>
-          </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lineCard"></div>
-
-      <div class="firstSong" onclick="thirdSong()">
-        <div class="imgDiv">
-          <img src="/img/lastonestanding.jpeg">
-          <div class="songInfoCard">
-            <p>Last one standing</p>
-            <p>Skyler grey & Eminem</p>
-          </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lineCard"></div>
-
-      <div class="firstSong" onclick="fourSong()">
-        <div class="imgDiv">
-          <img src="/img/aurora.jpeg">
-          <div class="songInfoCard">
-            <p>Aurora</p>
-            <p>K-391 & RORY</p>
-          </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lineCard"></div>
-      <div class="firstSong" onclick="fiveSong()">
-        <div class="imgDiv">
-          <img src="/img/fakeasmile.jpeg">
-          <div class="songInfoCard">
-            <p>Fake a smile</p>
-            <p>Alan Walker & salem ilese</p>
-          </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lineCard"></div>
-      <div class="firstSong" onclick="sixSong()">
-        <div class="imgDiv">
-          <img src="/img/glow.jpeg">
-          <div class="songInfoCard">
-            <p>Glow</p>
-            <p>Corsak & Robinson</p>
-          </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lineCard"></div>
-
-      <div class="firstSong" onclick="sevenSong()">
-        <div class="imgDiv">
-          <img src="/img/helloworld.jpeg">
-          <div class="songInfoCard">
-            <p>Hello World</p>
-            <p>Alan Walker & Torine</p>
-          </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-          </div>
-        </div>
-      </div>
-      <div class="lineCard"></div>
-
-      <div class="firstSong" onclick="eightSong()">
-        <div class="imgDiv">
-          <img src="/img/army.jpeg">
-          <div class="songInfoCard">
-            <p>Army</p>
-            <p>Besomorph & Neoni</p>
-          </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-          </div>
-        </div>
-      </div>
-      <div class="lineCard"></div>
-
-      <div class="firstSong" onclick="nineSong()">
-        <div class="imgDiv">
-          <img src="/img/headinghome.jpeg">
-          <div class="songInfoCard">
-            <p>Heading home</p>
-            <p>Alan Walker & Ruben</p>
-          </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-          </div>
-        </div>
-      </div>
-      <div class="lineCard"></div>
-
-      <div class="firstSong" onclick="tenSong()">
-        <div class="imgDiv">
-          <img src="/img/pride.jpeg">
-          <div class="songInfoCard">
-            <p>Pride & Fear</p>
-            <p>Thefatrat & Riell</p>
-          </div>
-          <div class="isPlaying">
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-            <div class="a queryBtn"></div>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
 
-  <div class="callCardBtn queryBtn" onclick="callCard()">
-    <img src="/icons/music.svg">
-  </div>
-
-  <div class="displayNavBtn queryBtn" id="btn" onclick="callNav()">
-    <img src="/icons/chevron-right.svg">
-  </div>
-
-  <div class="navMain" id="callNav">
-    <div class="header queryBtn">
-      <text>Music Player</text>
+    <div class="callCardBtn queryBtn" onclick="callCard()">
+      <img src="/icons/music.svg" />
     </div>
-    <div class="resourcesMain">
-      <div class="resourcesDesign">
-        <button class="btnMain">
-          <span class="hoverBtn">Resources</span>
-        </button>
+
+    <div class="displayNavBtn queryBtn" id="btn" onclick="callNav()">
+      <img src="/icons/chevron-right.svg" />
+    </div>
+
+    <div class="navMain" id="callNav">
+      <div class="header queryBtn">
+        <text>Music Player</text>
       </div>
-      <div class="resource">
-        <h3>Fonts</h3>
-        <p>Montserrat</p>
-        <div class="line"></div>
-        <h3>Icons</h3>
-        <p><a href="http://tabler-icons.io/">Tabler icons</a></p>
+      <div class="resourcesMain">
+        <div class="resourcesDesign">
+          <button class="btnMain">
+            <span class="hoverBtn">Resources</span>
+          </button>
+        </div>
+        <div class="resource">
+          <h3>Fonts</h3>
+          <p>Montserrat</p>
+          <div class="line"></div>
+          <h3>Icons</h3>
+          <p><a href="http://tabler-icons.io/">Tabler icons</a></p>
+        </div>
+      </div>
+      <div class="versionDiv">
+        <text>v1.0.0<br />Last update 02-05-2022</text>
       </div>
     </div>
-    <div class="versionDiv">
-      <text>v1.0.0<br>Last update 02-05-2022</text>
-    </div>
-  </div>
 
-  <audio src="" id="audioPlay"></audio>
-  <script type="text/javascript" src="index.js"></script>
-</body>
-
+    <audio src="" id="audioPlay"></audio>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
 </html>
